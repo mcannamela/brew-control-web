@@ -1,0 +1,49 @@
+@import '../constants.scss';
+
+.clients__title {
+  display: block;
+  color: #b1d253;
+  font-family: Graphik;
+  font-size: 14.0px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.clients__subline {
+  display: block;
+  color: #282533;
+  font-family: Graphik;
+  font-size: 28.0px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.clients__logo {
+  max-width: 80%;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.clients__divider {
+  width: 95px;
+  height: 3px;
+  background-color: #50c1dc;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .clients__title {
+    color: $monthly-color;
+  }
+
+  .yearly .clients__title {
+    color: $yearly-color;
+  }
+}

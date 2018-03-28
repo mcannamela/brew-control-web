@@ -1,0 +1,192 @@
+@import '../constants';
+
+.slider {
+  display: inline-block;
+}
+
+.plan__slider {
+  text-align: right;
+}
+
+.plan__headline {
+  color: #282433;
+  font-size: 14.0px;
+  font-weight: 400;
+  text-align: left;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.plan__subline {
+  color: #282433;
+  font-size: 32.0px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.plan__originalGravity_cta {
+  color: #282433;
+  font-size: 15.0px;
+  font-weight: 400;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  max-width: 20%;
+}
+
+.monthly .plan__originalGravity_cta {
+  font-weight: 500;
+}
+
+.plan__finalGravity_cta {
+  color: #95929d;
+  font-weight: 400;
+  font-size: 15.0px;
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  max-width: 35%;
+}
+
+.plan__options {
+  margin-top: 50px;
+  box-shadow: 0px 10px 30px rgba(56,61,67,0.14);
+}
+
+.plan__option {
+  padding: 0 !important; // Ugly hack to get around column default padding.
+  border-right: 1px solid #e8e9ed;
+  text-align: center;
+
+  span {
+    display: block;
+  }
+}
+
+.plan__option_title {
+  background-color: $monthly-color;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 18.0px;
+  border-radius: 3px;
+}
+
+.plan__option_price {
+  font-size: 50.0px;
+  font-weight: 300;
+  padding-top: 30px;
+}
+
+.plan__option_perMonth {
+  font-size: 15px;
+  font-weight: 500;
+  color: #95929d;
+}
+
+.plan__option_divider {
+  margin: 0 auto;
+  width: 80%;
+  height: 1px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1.5px solid #e7e8ec;
+}
+
+.plan__option_cta {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 15.0px;
+  color: #282433;
+
+  &.large {
+    font-weight: 500;
+  }
+}
+
+.plan__option_select {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-decoration: none;
+  height: 50px;
+  border: 1px solid #81d3e7;
+  background: #f1fcff;
+  color: #53c1db;
+  font-size: 15.0px;
+  text-align: center;
+  border-radius: 3px;
+
+  span {
+    margin-top: 18px;
+  }
+}
+
+.yearly {
+  .plan__option_title {
+    background-color: $yearly-color;
+  }
+
+  .plan__finalGravity_cta {
+    color: #666dbc;
+    font-weight: 500;
+  }
+
+  .plan__option_select {
+    border: 1px solid #9498d3;
+    background: #f0f0fa;
+    color: #666dbc;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .plan__headline {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: $monthly-color;
+  }
+
+  .yearly {
+    .plan__headline {
+      color: $yearly-color;
+    }
+  }
+
+  .plan__subline {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .plan__slider {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .plan__option_cta.large {
+    font-weight: 400;
+  }
+
+  .plan__option {
+    margin-top: 30px;
+    box-shadow: 0px 10px 30px rgba(56,61,67,0.14);
+  }
+
+  .plan__options {
+    box-shadow: none;
+  }
+
+  .plan__originalGravity_cta {
+    text-align: left;
+  }
+
+  .plan__finalGravity_cta {
+    text-align: right;
+  }
+}

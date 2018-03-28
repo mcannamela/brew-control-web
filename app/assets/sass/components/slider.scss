@@ -1,0 +1,32 @@
+@import '../constants';
+
+.monthly .slider {
+  background-color: $monthly-color;
+}
+
+.yearly .slider {
+  background-color: $yearly-color;
+}
+
+.slider {
+  width: 70px;
+  height: 33px;
+  position: relative;
+  border-radius: 17px;
+  cursor: pointer;
+}
+
+.slider__toggle {
+  border-radius: 19px;
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  right: 0;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+  background: #ffffff;
+}
+
+.slider__toggle.left {
+  left: 0;
+  right: auto;
+}
