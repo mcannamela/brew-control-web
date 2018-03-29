@@ -12,8 +12,8 @@ export default {
       },
       plan: {
         perMonth: 'per pint',
-        originalGravity: 'Original Gravity',
-        finalGravity: 'Final Gravity',
+        monthly: 'Original Gravity',
+        yearly: 'Final Gravity',
         types: {
           entrepreneur: 'Ale',
           growth: 'Lager',

@@ -5,8 +5,8 @@ import { Brewing } from '../index';
 describe('Brewing', () => {
   it('should render correctly', () => {
     const output = shallow(
-      <Brewing pricingModel={'finalGravity'} />
+      <Brewing brewingModel={'yearly'} />
     );
-    expect(output.find('.finalGravity').length).toBe(1);
+    expect(output.find('.yearly').length).toBe(1);
   });
 });

@@ -24,7 +24,7 @@
   text-align: left;
 }
 
-.plan__originalGravity_cta {
+.plan__monthly_cta {
   color: #282433;
   font-size: 15.0px;
   font-weight: 400;
@@ -35,11 +35,11 @@
   max-width: 20%;
 }
 
-.monthly .plan__originalGravity_cta {
+.monthly .plan__monthly_cta {
   font-weight: 500;
 }
 
-.plan__finalGravity_cta {
+.plan__yearly_cta {
   color: #95929d;
   font-weight: 400;
   font-size: 15.0px;
@@ -132,7 +132,7 @@
     background-color: $yearly-color;
   }
 
-  .plan__finalGravity_cta {
+  .plan__yearly_cta {
     color: #666dbc;
     font-weight: 500;
   }
@@ -182,11 +182,11 @@
     box-shadow: none;
   }
 
-  .plan__originalGravity_cta {
+  .plan__monthly_cta {
     text-align: left;
   }
 
-  .plan__finalGravity_cta {
+  .plan__yearly_cta {
     text-align: right;
   }
 }

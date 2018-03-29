@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Translate } from 'react-redux-i18n';
 import { Row, Col } from 'react-flexbox-grid';
 
@@ -9,13 +9,13 @@ import '../../assets/sass/components/plan.scss';
 
 const BEERS = [{
   name: 'ale',
-  originalGravity: '1.067',
-  finalGravity: '1.011',
+  monthly: '1.067',
+  yearly: '1.011',
   calloutAmount: '250'
 }, {
   name: 'lager',
-  originalGravity: '1.055',
-  finalGravity: '1.015',
+  monthly: '1.055',
+  yearly: '1.015',
   calloutAmount: '1000'
 },];
 
@@ -29,11 +29,11 @@ export default class Plan extends React.Component {
             <h1><Translate className='plan__subline' value='pricing.title.subline'/></h1>
           </Col>
           <Col xs={12} md={8} lg={6} className='plan__slider'>
-            <Translate className='plan__originalGravity_cta' value='pricing.plan.originalGravity'/>
+            <Translate className='plan__monthly_cta' value='pricing.plan.monthly'/>
             <Slider
-              isLeft={this.props.pricingModel === 'originalGravity'}
+              isLeft={this.props.brewingModel === 'monthly'}
               onToggle={this.props.onSliderToggle} />
-            <Translate className='plan__finalGravity_cta' value='pricing.plan.finalGravity' />
+            <Translate className='plan__yearly_cta' value='pricing.plan.yearly' />
           </Col>
         </Row>
         <Row className='plan__options'>
@@ -57,7 +57,7 @@ export default class Plan extends React.Component {
             const renderSelect = () => {
               return (
                 <Link className='plan__option_select' to={{
-                  pathname: `/confirmation/${plan.name}/${this.props.pricingModel}/`
+                  pathname: `/confirmation/${plan.name}/${this.props.brewingModel}/`
                 }}>
                   <Translate
                     value={plan.name === 'largeBusiness' ? 'pricing.plan.contact' : 'pricing.plan.select'} />
@@ -73,7 +73,7 @@ export default class Plan extends React.Component {
                 <Translate
                   className='plan__option_price'
                   value='pricing.plan.price'
-                  amount={ this.props.pricingModel === 'originalGravity' ? plan.originalGravity : plan.finalGravity }/>
+                  amount={ this.props.brewingModel === 'monthly' ? plan.monthly : plan.yearly }/>
                 <Translate className='plan__option_perMonth' value='pricing.plan.perMonth' />
 
                 <div className='plan__option_divider' />
@@ -94,6 +94,6 @@ export default class Plan extends React.Component {
 }
 
 Plan.propTypes = {
-  pricingModel: PropTypes.string.isRequired,
+  brewingModel: PropTypes.string.isRequired,
   onSliderToggle: PropTypes.func.isRequired
 };

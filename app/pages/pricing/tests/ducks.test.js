@@ -17,5 +17,5 @@ test('Reducer will supply its own initialState when none is given', () => {
 test('Reducer should recieve action and update state', () => {
   const initialState = {};
   const out = reducer(initialState, pricingDuck.changePricing(pricingDuck.PRICING_TYPES.MONTHLY));
-  expect(out).toEqual({ brewingModel: 'originalGravity' });
+  expect(out).toEqual({ brewingModel: 'monthly' });
 });
