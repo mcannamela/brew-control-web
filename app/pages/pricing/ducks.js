@@ -1,6 +1,6 @@
 export const PRICING_TYPES = {
   MONTHLY: 'originalGravity',
-  YEARLY: 'yearly'
+  YEARLY: 'finalGravity'
 };
 
 export const initialState = {

@@ -35,7 +35,7 @@
   max-width: 20%;
 }
 
-.monthly .plan__monthly_cta {
+.originalGravity .plan__monthly_cta {
   font-weight: 500;
 }
 
@@ -127,7 +127,7 @@
   }
 }
 
-.yearly {
+.finalGravity {
   .plan__option_title {
     background-color: $yearly-color;
   }
@@ -152,7 +152,7 @@
     color: $monthly-color;
   }
 
-  .yearly {
+  .finalGravity {
     .plan__headline {
       color: $yearly-color;
     }
