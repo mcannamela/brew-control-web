@@ -7,7 +7,7 @@ describe('Plan', () => {
   it('should render correctly', () => {
     const spy = jest.fn();
     const output = shallow(
-      <Plan brewingModel={'monthly'} onSliderToggle={spy}/>
+      <Plan brewingModel={'originalGravity'} onSliderToggle={spy}/>
     );
     expect(output.find(Slider).length).toBe(1);
     expect(output.find(Slider).prop('isLeft')).toBe(true);

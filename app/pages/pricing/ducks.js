@@ -1,5 +1,5 @@
 export const PRICING_TYPES = {
-  MONTHLY: 'monthly',
+  MONTHLY: 'originalGravity',
   YEARLY: 'yearly'
 };
 

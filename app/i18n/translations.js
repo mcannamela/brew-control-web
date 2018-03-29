@@ -12,7 +12,7 @@ export default {
       },
       plan: {
         perMonth: 'per pint',
-        monthly: 'Original Gravity',
+        originalGravity: 'Original Gravity',
         yearly: 'Final Gravity',
         types: {
           entrepreneur: 'Ale',

@@ -9,12 +9,12 @@ import '../../assets/sass/components/plan.scss';
 
 const BEERS = [{
   name: 'ale',
-  monthly: '1.067',
+  originalGravity: '1.067',
   yearly: '1.011',
   calloutAmount: '250'
 }, {
   name: 'lager',
-  monthly: '1.055',
+  originalGravity: '1.055',
   yearly: '1.015',
   calloutAmount: '1000'
 },];
@@ -29,9 +29,9 @@ export default class Plan extends React.Component {
             <h1><Translate className='plan__subline' value='pricing.title.subline'/></h1>
           </Col>
           <Col xs={12} md={8} lg={6} className='plan__slider'>
-            <Translate className='plan__monthly_cta' value='pricing.plan.monthly'/>
+            <Translate className='plan__monthly_cta' value='pricing.plan.originalGravity'/>
             <Slider
-              isLeft={this.props.brewingModel === 'monthly'}
+              isLeft={this.props.brewingModel === 'originalGravity'}
               onToggle={this.props.onSliderToggle} />
             <Translate className='plan__yearly_cta' value='pricing.plan.yearly' />
           </Col>
@@ -73,7 +73,7 @@ export default class Plan extends React.Component {
                 <Translate
                   className='plan__option_price'
                   value='pricing.plan.price'
-                  amount={ this.props.brewingModel === 'monthly' ? plan.monthly : plan.yearly }/>
+                  amount={ this.props.brewingModel === 'originalGravity' ? plan.originalGravity : plan.yearly }/>
                 <Translate className='plan__option_perMonth' value='pricing.plan.perMonth' />
 
                 <div className='plan__option_divider' />
