@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CompanyLogo from '../../assets/svg/logo_black.svg';
 import '../../assets/sass/components/slider.scss';
 
 export default class Slider extends React.Component {

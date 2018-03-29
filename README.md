@@ -3,6 +3,8 @@
 Legally distinct from brew-control. We aspire to control our brewery from the web and learn to build a modern
 web app in the process.
 
+The basic project structure was shamelessly lifted from work by github user fumblesandfriends.
+
 ## Features
 
 * Fully responsive design down to 320px.
