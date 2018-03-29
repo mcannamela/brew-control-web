@@ -1,3 +1,5 @@
+@import '../constants';
+
 .agency {
   margin-top: 50px;
 
@@ -24,9 +26,9 @@
   margin-top: 25px;
   text-decoration: none;
   height: 35px;
-  border: 1px solid #81d3e7;
-  background: #f1fcff;
-  color: #53c1db;
+  border: 1px solid $monthly-color;
+  background: $monthly-bg-color;
+  color: $monthly-color;
   font-size: 15.0px;
   text-align: center;
   border-radius: 3px;
@@ -48,9 +50,9 @@
 
 .finalGravity {
   .agency__button {
-    border: 1px solid #9498d3;
-    background: #f0f0fa;
-    color: #666dbc;
+    border: 1px solid $yearly-color;
+    background: $yearly-bg-color;
+    color: $yearly-color;
   }
 
   .agency__arrow_blue {
