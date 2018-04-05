@@ -57,7 +57,7 @@ export default class Footer extends React.Component {
               </a>
 
               <Translate className='footer__made' value='footer.made1'/>
-              <Heart className='footer__heart'/>
+              <Heart className='footer__logo' viewBox="0 0 256 256" />
               <Translate className='footer__made' value='footer.made2'/>
             </div>
             <div>
