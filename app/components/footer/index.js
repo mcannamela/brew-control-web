@@ -44,7 +44,7 @@ export default class Footer extends React.Component {
 
         <Row>
           <Col xs={12} md={4}>
-            <CompanyLogo className='footer__logo'/>
+            <CompanyLogo className='footer__logo' viewBox="0 0 256 256"/>
             <Translate className='footer__copyright' value='footer.copyright'/>
           </Col>
           <Col xs={12} md={8}>
