@@ -6,7 +6,7 @@ export default class Slider extends React.Component {
   render() {
     return (
       <div onClick={this.onClick.bind(this)} className='slider'>
-        <div className={ `slider__toggle ${this.props.isLeft ? 'left' : 'right'}` }></div>
+        <div className={`slider__toggle ${this.props.isLeft ? 'left' : 'right'}`}></div>
       </div>
     );
   }

@@ -4,6 +4,6 @@ import '../../assets/sass/components/header.scss';
 
 export default class Header extends React.Component {
   render() {
-    return (<CompanyLogo className='header__logo' />);
+    return (<CompanyLogo className='header__logo'/>);
   }
 }

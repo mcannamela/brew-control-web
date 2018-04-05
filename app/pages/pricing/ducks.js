@@ -11,13 +11,13 @@ export const CHANGE_PRICING = 'app/pricing/CHANGE_PRICING';
 
 export default (state = initialState, action) => {
   switch (action.type) {
-  case CHANGE_PRICING:
-    return {
-      ...state,
-      brewingModel: action.payload
-    };
-  default:
-    return state;
+    case CHANGE_PRICING:
+      return {
+        ...state,
+        brewingModel: action.payload
+      };
+    default:
+      return state;
   }
 };
 

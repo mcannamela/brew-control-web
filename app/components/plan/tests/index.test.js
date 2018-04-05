@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import {shallow, mount, render} from 'enzyme';
 import Plan from '../index';
 import Slider from '../../slider';
 
