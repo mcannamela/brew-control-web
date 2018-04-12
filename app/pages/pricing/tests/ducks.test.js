@@ -30,16 +30,16 @@ test('Reducer should receive prependBrewingState action and update state', () =>
   const out2 = reducer(out1, pricingDuck.prependBrewState('state2'));
   expect(out1).toEqual({'brewStates': ['state1']});
   expect(out2).toEqual({'brewStates': ['state2', 'state1']});
-})
+});
 
-test('Max states should be pretty big', () => {expect(pricingDuck.MAX_STATES).toBeGreaterThan(10000)})
+test('Max states should be pretty big', () => {expect(pricingDuck.MAX_STATES).toBeGreaterThan(10000);});
 
 test('Reducer should receive prependBrewingState repeatedly but truncate the array eventually', () => {
   const initialState = {brewStates: Array.from(Array(pricingDuck.MAX_STATES).keys())};
   expect(initialState.brewStates.length).toEqual(pricingDuck.MAX_STATES);
 
   const out = reducer(initialState, pricingDuck.prependBrewState(-1));
-  const brewStates = out.brewStates
+  const brewStates = out.brewStates;
   expect(brewStates[0]).toEqual(-1);
   expect(brewStates[1]).toEqual(0);
   expect(brewStates.slice(-1)[0]).toEqual(pricingDuck.MAX_STATES-2);
