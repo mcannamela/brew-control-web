@@ -13,7 +13,7 @@ export default class Confirmation extends React.Component {
         <Row>
           <Col xs={12}>
             <Translate value='confirmation.line'/> <Translate
-            value={`pricing.plan.types.${this.props.match.params.plan}`}/>
+              value={`pricing.plan.types.${this.props.match.params.plan}`}/>
           </Col>
           <Col xs={12}>
             <Link to='/'><Translate value='confirmation.back'/></Link>

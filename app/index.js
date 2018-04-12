@@ -46,8 +46,8 @@ ReactDOM.render(
           <title>Brew Control Web</title>
           <meta name="description" content="Brew Control Web"/>
           <link rel="icon"
-                type="image/png"
-                href={Favicon}/>
+            type="image/png"
+            href={Favicon}/>
         </Helmet>
         <Route exact path='/' component={Pricing}/>
         <Route path='/confirmation/:plan/:priceModel' component={Confirmation}/>
