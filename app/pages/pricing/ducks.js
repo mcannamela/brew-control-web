@@ -11,7 +11,7 @@ export const initialState = {
 export const CHANGE_PRICING = 'app/pricing/CHANGE_PRICING';
 export const PREPEND_BREW_STATE = 'app/pricing/PREPEND_BREW_STATE';
 
-const MAX_STATES = 1000000;
+export const MAX_STATES = 1000000;
 
 export default (state = initialState, action) => {
   switch (action.type) {
