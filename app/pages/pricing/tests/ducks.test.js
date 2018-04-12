@@ -15,8 +15,19 @@ test('Reducer will supply its own initialState when none is given', () => {
   expect(out).toEqual(pricingDuck.initialState);
 });
 
-test('Reducer should recieve action and update state', () => {
+test('Reducer should recieve changePricing action and update state', () => {
   const initialState = {};
   const out = reducer(initialState, pricingDuck.changePricing(pricingDuck.PRICING_TYPES.MONTHLY));
   expect(out).toEqual({brewingModel: 'originalGravity'});
+});
+
+
+test('Reducer should recieve prependBrewingState action and update state', () => {
+  const initialState = {brewStates: []};
+  const out1 = reducer(initialState, pricingDuck.prependBrewState('state1'));
+  expect(out1).toEqual({'brewStates': ['state1']});
+
+  const out2 = reducer(out1, pricingDuck.prependBrewState('state2'));
+  expect(out1).toEqual({'brewStates': ['state1']});
+  expect(out2).toEqual({'brewStates': ['state2', 'state1']});
 });
