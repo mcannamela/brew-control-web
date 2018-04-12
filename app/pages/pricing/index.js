@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {Grid} from 'react-flexbox-grid';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import Plan from '../../components/plan';
+import BrewStatus from '../../components/brew_status';
 import {mapDispatchToProps, mapStateToProps} from './ducks';
 
 export class Brewing extends React.Component {
@@ -12,7 +12,7 @@ export class Brewing extends React.Component {
     return (
       <Grid className={this.props.brewingModel}>
         <Header/>
-        <Plan {...this.props} />
+        <BrewStatus {...this.props} />
         <Footer/>
       </Grid>
     );

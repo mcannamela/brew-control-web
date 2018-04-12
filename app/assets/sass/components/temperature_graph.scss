@@ -1,33 +1,32 @@
 @import '../constants';
 
-.originalGravity .slider {
+.originalGravity .temperature_graph {
   background-color: $monthly-color;
 }
 
-.finalGravity .slider {
+.finalGravity .temperature_graph {
   background-color: $yearly-color;
 }
 
-.slider {
+.temperature_graph {
   width: 70px;
-  height: 13px;
+  height: 33px;
   position: relative;
   border-radius: 17px;
-  cursor: crosshair;
+  cursor: pointer;
 }
 
-.slider__toggle {
+.temperature_graph__toggle {
   border-radius: 19px;
   width: 33px;
   height: 33px;
   position: absolute;
-  bottom: -10px;
   right: 0;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
   background: #ffffff;
 }
 
-.slider__toggle.left {
+.temperature_graph__toggle.left {
   left: 0;
   right: auto;
 }
