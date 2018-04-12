@@ -4,20 +4,29 @@ export const PRICING_TYPES = {
 };
 
 export const initialState = {
-  brewingModel: PRICING_TYPES.MONTHLY
+  brewingModel: PRICING_TYPES.MONTHLY,
+  brewStates: []
 };
 
 export const CHANGE_PRICING = 'app/pricing/CHANGE_PRICING';
+export const PREPEND_BREW_STATE = 'app/pricing/PREPEND_BREW_STATE';
+
+export const MAX_STATES = 1000000;
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case CHANGE_PRICING:
-      return {
-        ...state,
-        brewingModel: action.payload
-      };
-    default:
-      return state;
+  case CHANGE_PRICING:
+    return {
+      ...state,
+      brewingModel: action.payload
+    };
+  case PREPEND_BREW_STATE:
+    return {
+      ...state,
+      brewStates: [action.brewState, ...state.brewStates].slice(0, MAX_STATES)
+    };
+  default:
+    return state;
   }
 };
 
@@ -31,6 +40,15 @@ export const changePricing = pricingType => {
     payload: pricingType
   };
 };
+
+export const prependBrewState = brewState => {
+  return {
+    type: PREPEND_BREW_STATE,
+    brewState: brewState
+  };
+};
+
+
 
 /**
  * A function that maps the app state the the components properties
