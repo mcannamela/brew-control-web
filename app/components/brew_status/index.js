@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import {Translate} from 'react-redux-i18n';
 import {Row, Col} from 'react-flexbox-grid';
+import TemperatureGraph from '../temperature_graph';
 
 import Slider from '../slider';
-import '../../assets/sass/components/plan.scss';
+import '../../assets/sass/components/brew_status.scss';
 
 const BEERS = [{
   name: 'ale',
@@ -19,10 +20,74 @@ const BEERS = [{
   calloutAmount: '1000'
 },];
 
-export default class Plan extends React.Component {
+
+const CHART_CONFIG = {
+  title: {
+    text: 'Some Manufactured Data About DogeBrew'
+  },
+
+  subtitle: {
+    text: 'Source: drinkdoge.com'
+  },
+
+  yAxis: {
+    title: {
+      text: 'Arbitrary Value [Arb.]'
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle'
+  },
+
+  plotOptions: {
+    series: {
+      label: {
+        connectorAllowed: false
+      },
+      pointStart: 2010
+    }
+  },
+
+  series: [{
+    name: 'Consumption',
+    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+  }, {
+    name: 'Manufacturing',
+    data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+  }, {
+    name: 'Desire',
+    data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+  }, {
+    name: 'Project Development',
+    data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+  }, {
+    name: 'Dogeryness',
+    data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+  }],
+
+  responsive: {
+    rules: [{
+      condition: {
+        maxWidth: 500
+      },
+      chartOptions: {
+        legend: {
+          layout: 'horizontal',
+          align: 'center',
+          verticalAlign: 'bottom'
+        }
+      }
+    }]
+  }
+};
+
+export default class BrewStatus extends React.Component {
   render() {
     return (
       <div className='plan'>
+        <TemperatureGraph config={CHART_CONFIG} />
         <Row bottom="xs">
           <Col xs={12} md={4} lgOffset={2}>
             <Translate className='plan__headline' value='pricing.title.headline'/>
@@ -93,7 +158,7 @@ export default class Plan extends React.Component {
   }
 }
 
-Plan.propTypes = {
+BrewStatus.propTypes = {
   brewingModel: PropTypes.string.isRequired,
-  onSliderToggle: PropTypes.func.isRequired
+  onSliderToggle: PropTypes.func.isRequired,
 };
