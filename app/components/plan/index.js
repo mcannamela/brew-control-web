@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { Translate } from 'react-redux-i18n';
-import { Row, Col } from 'react-flexbox-grid';
+import {Link} from 'react-router-dom';
+import {Translate} from 'react-redux-i18n';
+import {Row, Col} from 'react-flexbox-grid';
 
 import Slider from '../slider';
 import '../../assets/sass/components/plan.scss';
@@ -25,15 +25,15 @@ export default class Plan extends React.Component {
       <div className='plan'>
         <Row bottom="xs">
           <Col xs={12} md={4} lgOffset={2}>
-            <Translate className='plan__headline' value='pricing.title.headline' />
+            <Translate className='plan__headline' value='pricing.title.headline'/>
             <h1><Translate className='plan__subline' value='pricing.title.subline'/></h1>
           </Col>
           <Col xs={12} md={8} lg={6} className='plan__slider'>
             <Translate className='plan__monthly_cta' value='pricing.plan.originalGravity'/>
             <Slider
               isLeft={this.props.brewingModel === 'originalGravity'}
-              onToggle={this.props.onSliderToggle} />
-            <Translate className='plan__yearly_cta' value='pricing.plan.finalGravity' />
+              onToggle={this.props.onSliderToggle}/>
+            <Translate className='plan__yearly_cta' value='pricing.plan.finalGravity'/>
           </Col>
         </Row>
         <Row className='plan__options'>
@@ -46,7 +46,7 @@ export default class Plan extends React.Component {
               return (
                 <a className='plan__option_select' href='https://github.com/mcannamela/brew-control'>
                   <Translate
-                    value={plan.name === 'largeBusiness' ? 'pricing.plan.contact' : 'pricing.plan.select'} />
+                    value={plan.name === 'largeBusiness' ? 'pricing.plan.contact' : 'pricing.plan.select'}/>
                 </a>
               );
             };
@@ -60,30 +60,30 @@ export default class Plan extends React.Component {
                   pathname: `/confirmation/${plan.name}/${this.props.brewingModel}/`
                 }}>
                   <Translate
-                    value={plan.name === 'largeBusiness' ? 'pricing.plan.contact' : 'pricing.plan.select'} />
+                    value={plan.name === 'largeBusiness' ? 'pricing.plan.contact' : 'pricing.plan.select'}/>
                 </Link>
               );
             };
 
             return (
-              <Col key={plan.name} className={`plan__option plan__option_${plan.name}`} xs={12} md={6} lg={3} >
+              <Col key={plan.name} className={`plan__option plan__option_${plan.name}`} xs={12} md={6} lg={3}>
                 <div className='plan__option_title'>
-                  <Translate value={ `pricing.plan.types.${plan.name}` } />
+                  <Translate value={`pricing.plan.types.${plan.name}`}/>
                 </div>
                 <Translate
                   className='plan__option_price'
                   value='pricing.plan.price'
-                  amount={ this.props.brewingModel === 'originalGravity' ? plan.originalGravity : plan.finalGravity }/>
-                <Translate className='plan__option_perMonth' value='pricing.plan.perMonth' />
+                  amount={this.props.brewingModel === 'originalGravity' ? plan.originalGravity : plan.finalGravity}/>
+                <Translate className='plan__option_perMonth' value='pricing.plan.perMonth'/>
 
-                <div className='plan__option_divider' />
+                <div className='plan__option_divider'/>
 
                 <Translate
-                  className={ `plan__option_cta ${plan.name === 'largeBusiness' ? 'large' : ''}` }
-                  value={ plan.name === 'largeBusiness' ? 'pricing.plan.largeCallout' :  'pricing.plan.callout' }
-                  amount={ plan.calloutAmount } />
+                  className={`plan__option_cta ${plan.name === 'largeBusiness' ? 'large' : ''}`}
+                  value={plan.name === 'largeBusiness' ? 'pricing.plan.largeCallout' : 'pricing.plan.callout'}
+                  amount={plan.calloutAmount}/>
 
-                { plan.name !== 'largeBusiness' ? renderSelect() : renderContactUs() }
+                {plan.name !== 'largeBusiness' ? renderSelect() : renderContactUs()}
               </Col>
             );
           })}

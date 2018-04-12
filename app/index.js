@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Helmet } from 'react-helmet';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import {Helmet} from 'react-helmet';
+import {applyMiddleware, combineReducers, createStore} from 'redux';
 import thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
-import { Route } from 'react-router';
-import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
-import { loadTranslations, setLocale, syncTranslationWithStore, i18nReducer } from 'react-redux-i18n';
+import {Route} from 'react-router';
+import {ConnectedRouter, routerMiddleware} from 'react-router-redux';
+import {i18nReducer, loadTranslations, setLocale, syncTranslationWithStore} from 'react-redux-i18n';
 import reducers from './reducers'; // Or wherever you keep your reducers
 import Pricing from './pages/pricing';
 import Confirmation from './pages/confirmation';
@@ -39,18 +39,18 @@ store.dispatch(setLocale('en'));
 
 ReactDOM.render(
   <Provider store={store}>
-    { /* ConnectedRouter will use the store from Provider automatically */ }
+    {/* ConnectedRouter will use the store from Provider automatically */}
     <ConnectedRouter history={history}>
       <div>
         <Helmet>
           <title>Brew Control Web</title>
-          <meta name="description" content="Brew Control Web" />
+          <meta name="description" content="Brew Control Web"/>
           <link rel="icon"
-            type="image/png"
-            href={Favicon}/>
+                type="image/png"
+                href={Favicon}/>
         </Helmet>
         <Route exact path='/' component={Pricing}/>
-        <Route path='/confirmation/:plan/:priceModel' component={Confirmation} />
+        <Route path='/confirmation/:plan/:priceModel' component={Confirmation}/>
       </div>
     </ConnectedRouter>
   </Provider>,

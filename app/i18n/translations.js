@@ -18,7 +18,7 @@ export default {
           entrepreneur: 'Ale',
           growth: 'Lager',
         },
-        price: '$%{amount}',
+        price: '¥%{amount}',
         select: 'Select Beer',
         largeCallout: 'Over %{amount} pints per month',
         callout: 'Up to %{amount} pints per month',
@@ -53,7 +53,7 @@ export default {
       privacy: 'Privacy Policy',
       terms: 'Terms & Conditions',
       copyright: 'Copyright \u00A9 2018 brew-control',
-      made1: 'Brewed with',
+      made1: 'Brewed without',
       made2: 'in Boston'
     }
   }

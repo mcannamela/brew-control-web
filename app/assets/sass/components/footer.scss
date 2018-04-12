@@ -1,6 +1,7 @@
 .footer {
   margin-top: 100px;
 }
+
 .footer__title {
   color: #282433;
   font-size: 15.0px;
@@ -11,10 +12,10 @@
 
 .footer__subtitle {
   display: block;
-   color: #95929d;
-   font-size: 15.0px;
-   text-decoration: none;
-   margin-bottom: 14px;
+  color: #95929d;
+  font-size: 15.0px;
+  text-decoration: none;
+  margin-bottom: 14px;
 }
 
 .footer__button {
@@ -49,6 +50,11 @@
   font-size: 12.0px;
   text-align: left;
   margin-top: 15px;
+}
+
+.footer__logo {
+  width: 50px;
+  height: 50px;
 }
 
 .footer__terms {
